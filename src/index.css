@@ -1,16 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0F172A;
+  --color-primary: #D61F26;
+  --color-primary-hover: #B91C1C;
+  --color-gold: #C5A059;
+
+  --font-serif: "DM Serif Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
 
 :root {
   --primary: #D61F26;
-  /* OAB Official Red */
   --primary-hover: #B91C1C;
   --secondary: #0F172A;
   --navy: #1E3A5F;
-  /* Refined Navy from Logo */
   --accent-red: #D61F26;
   --accent-blue: #2563EB;
   --bg-light: #F8FAFC;
