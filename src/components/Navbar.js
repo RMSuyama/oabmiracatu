@@ -5,16 +5,13 @@ import logo from '../assets/logo-oab.png';
 const Navbar = () => {
     const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isSearchOpen, setIsSearchOpen] = useState(false);
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         setIsMenuOpen(false);
-        setIsSearchOpen(false);
     };
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-    const toggleSearch = () => setIsSearchOpen(!isSearchOpen);
 
     const navItems = [
         { path: '/', label: 'Início' },
@@ -58,13 +55,6 @@ const Navbar = () => {
                 </ul>
 
                 <div className="flex items-center gap-4 ml-4 border-l border-white/10 pl-8">
-                    <button
-                        onClick={toggleSearch}
-                        className="text-white/60 hover:text-white transition-colors text-xl"
-                        aria-label="Search"
-                    >
-                        🔍
-                    </button>
                     <Link to="/login" className="text-white/60 hover:text-white transition-colors" title="Acesso Restrito">🔒</Link>
                     <a href="mailto:miracatu@oabsp.org.br" className="bg-primary text-white px-6 py-2.5 rounded text-[0.75rem] font-bold uppercase tracking-wider transition-all hover:translate-y-[-2px] hover:shadow-[0_5px_15px_rgba(214,31,38,0.4)]">
                         Fale Conosco
@@ -72,14 +62,8 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* Mobile Actions */}
-            <div className="flex lg:hidden items-center gap-4">
-                <button
-                    onClick={toggleSearch}
-                    className="text-white/80 text-xl p-2"
-                >
-                    🔍
-                </button>
+            {/* Mobile Toggle */}
+            <div className="flex lg:hidden items-center">
                 <button
                     className="text-white p-2 focus:outline-none"
                     onClick={toggleMenu}
@@ -90,22 +74,6 @@ const Navbar = () => {
                         <span className={`w-full h-0.5 bg-white transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
                         <span className={`w-full h-0.5 bg-white transition-transform duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-[9px]' : ''}`}></span>
                     </div>
-                </button>
-            </div>
-
-            {/* Search Overlay */}
-            <div className={`absolute top-0 left-0 w-full h-full bg-navy z-[1001] flex items-center px-6 lg:px-[5%] transition-all duration-300 ${isSearchOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'}`}>
-                <input
-                    type="text"
-                    placeholder="O que você procura? (ex: Comissões, Dativa...)"
-                    className="flex-1 bg-transparent border-none text-white text-xl lg:text-2xl font-light outline-none placeholder:text-white/40"
-                    autoFocus={isSearchOpen}
-                />
-                <button
-                    onClick={toggleSearch}
-                    className="text-white text-3xl font-light ml-4 hover:text-primary transition-colors"
-                >
-                    ×
                 </button>
             </div>
 
