@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Instafeed.css';
 
 const Instafeed = () => {
     // Mock data for the Instagram feed
@@ -13,19 +12,23 @@ const Instafeed = () => {
     ];
 
     return (
-        <div className="instafeed-widget">
-            <div className="insta-header">
-                <span className="insta-icon">📸</span>
-                <div className="insta-info">
-                    <h4>@oabmiracatu</h4>
-                    <p>Siga-nos no Instagram</p>
+        <div className="mt-10">
+            <div className="flex items-center gap-4 mb-6">
+                <span className="text-2xl">📸</span>
+                <div className="leading-tight">
+                    <h4 className="text-white font-bold text-base">@oabmiracatu</h4>
+                    <p className="text-white/40 text-[0.7rem] uppercase tracking-widest font-bold">Siga-nos no Instagram</p>
                 </div>
             </div>
-            <div className="insta-grid">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 lg:gap-3">
                 {posts.map(post => (
-                    <div key={post.id} className="insta-post" style={{ backgroundImage: `url(${post.url})` }}>
-                        <div className="insta-overlay">
-                            <span>❤️ 42</span>
+                    <div
+                        key={post.id}
+                        className="aspect-square bg-cover bg-center rounded-lg cursor-pointer relative overflow-hidden group border border-white/5"
+                        style={{ backgroundImage: `url(${post.url})` }}
+                    >
+                        <div className="absolute inset-0 bg-primary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm">
+                            <span className="text-white font-black text-xs">❤️ 42</span>
                         </div>
                     </div>
                 ))}
