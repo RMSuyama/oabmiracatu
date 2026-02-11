@@ -5,7 +5,6 @@ import logo from '../assets/logo-oab.png';
 
 const Navbar = () => {
     const location = useLocation();
-    const isHome = location.pathname === '/';
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });

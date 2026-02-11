@@ -11,30 +11,55 @@
 }
 
 .office-card {
-    background: var(--bg-light);
-    border-radius: 8px;
+    background: white;
+    border-radius: 12px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #f1f5f9;
     transition: var(--transition);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .office-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     border-color: var(--primary);
 }
 
+.office-media {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: #f8fafc;
+}
+
+.office-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.office-card:hover .office-photo {
+    transform: scale(1.05);
+}
+
+.office-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
 .office-info {
-    padding: 40px;
+    padding: 35px;
     flex: 1;
 }
 
 .office-type {
     display: inline-block;
-    padding: 5px 12px;
-    background: rgba(214, 31, 38, 0.1);
+    padding: 6px 14px;
+    background: rgba(176, 28, 41, 0.1);
     color: var(--primary);
     font-weight: 800;
     font-size: 0.7rem;
@@ -45,42 +70,58 @@
 }
 
 .office-card h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--navy);
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .office-card p {
     color: #64748b;
     margin-bottom: 25px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.office-card .details {
+    list-style: none;
+    padding: 0;
 }
 
 .office-card .details li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-size: 0.95rem;
-    color: var(--navy);
+    color: #334155;
+    display: flex;
+    gap: 10px;
 }
 
 .office-card .details strong {
-    color: var(--primary);
-    margin-right: 10px;
+    color: var(--navy);
+    min-width: 80px;
 }
 
 .office-map {
-    height: 300px;
-    background: #eee;
-}
-
-.main-headquarters {
-    border-top: 5px solid var(--primary);
-}
-
-.polo {
-    border-top: 5px solid var(--accent-blue);
+    height: 200px;
+    background: #f1f5f9;
+    margin: 0;
+    border-top: 1px solid #f1f5f9;
 }
 
 @media (max-width: 1024px) {
     .offices-grid {
         grid-template-columns: 1fr;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .office-media {
+        height: 200px;
+    }
+
+    .office-info {
+        padding: 25px;
     }
 }
