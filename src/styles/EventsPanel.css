@@ -1,0 +1,131 @@
+.events-panel {
+    padding: 120px 0;
+    background: white;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.event-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f1f5f9;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary);
+}
+
+.event-card-content {
+    display: flex;
+    padding: 25px;
+    gap: 20px;
+    flex: 1;
+    position: relative;
+}
+
+.event-date {
+    flex: 0 0 80px;
+    height: 80px;
+    background: var(--navy);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(30, 58, 95, 0.2);
+    padding: 0;
+    /* Override previous padding */
+    min-width: 80px;
+    /* Override previous min-width */
+}
+
+.event-card:hover .event-date {
+    background: var(--primary);
+}
+
+.event-date .day {
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.event-date .month {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+
+.event-details {
+    padding: 0;
+    /* Remove padding from container, handled by event-card-content */
+    flex: 1;
+}
+
+.event-category {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--primary);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.event-details h3 {
+    font-size: 1.15rem;
+    line-height: 1.3;
+    margin-bottom: 12px;
+    color: var(--navy);
+}
+
+.event-location {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+.event-link {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.event-link:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+@media (max-width: 768px) {
+    .event-card {
+        flex-direction: column;
+    }
+
+    .event-date {
+        padding: 20px;
+    }
+}

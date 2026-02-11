@@ -1,0 +1,63 @@
+.instafeed-widget {
+    margin-top: 40px;
+}
+
+.insta-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.insta-icon {
+    font-size: 1.5rem;
+}
+
+.insta-info h4 {
+    margin: 0;
+    color: white;
+    font-size: 1rem;
+}
+
+.insta-info p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.insta-post {
+    aspect-ratio: 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.insta-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(147, 51, 234, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.insta-post:hover .insta-overlay {
+    opacity: 1;
+}
+
+.insta-overlay span {
+    color: white;
+    font-weight: 700;
+    font-size: 0.8rem;
+}

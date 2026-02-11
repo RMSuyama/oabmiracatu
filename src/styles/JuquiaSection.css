@@ -1,0 +1,121 @@
+.juquia-section {
+    padding: 120px 0;
+    background: white;
+}
+
+.juquia-content {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.juquia-text {
+    flex: 1;
+}
+
+.section-tag {
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.juquia-section h2 {
+    font-size: 3.5rem;
+    color: var(--navy);
+    margin-bottom: 30px;
+    line-height: 1.1;
+}
+
+.juquia-section p {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+.juquia-info {
+    margin-bottom: 40px;
+}
+
+.juquia-info li {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.juquia-info strong {
+    color: var(--navy);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.juquia-info span {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 15px 35px;
+    border: 2px solid var(--navy);
+    color: var(--navy);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    border-radius: 4px;
+}
+
+.btn-outline:hover {
+    background: var(--navy);
+    color: white;
+}
+
+.juquia-image-placeholder {
+    flex: 1;
+    height: 500px;
+    background: var(--navy);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 23, 42, 0.4);
+}
+
+.image-overlay span {
+    color: white;
+    font-family: 'DM Serif Display', serif;
+    font-size: 3rem;
+    opacity: 0.2;
+}
+
+@media (max-width: 1024px) {
+    .juquia-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .juquia-section p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .juquia-image-placeholder {
+        width: 100%;
+        height: 350px;
+    }
+}
