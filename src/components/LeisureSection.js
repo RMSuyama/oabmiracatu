@@ -18,7 +18,7 @@ const LeisureSection = () => {
                             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1553484771-047a44eee27b?auto=format&fit=crop&q=80')] bg-cover bg-center"></div>
                             <div className="absolute top-6 left-6">
                                 <span className="bg-primary text-white px-4 py-1 rounded-lg text-xs font-bold uppercase tracking-widest shadow-lg">
-                                    Registro / SP
+                                    Juquiá / SP
                                 </span>
                             </div>
                         </div>
@@ -27,7 +27,7 @@ const LeisureSection = () => {
                             <div className="mb-10">
                                 <h3 className="text-3xl font-bold text-navy mb-3 font-serif">Área de Lazer da Advocacia</h3>
                                 <p className="text-primary font-bold text-sm tracking-wide flex items-center gap-2 italic">
-                                    📍 Estrada Municipal, Registro - SP
+                                    📍 Rua Major Martins Coelho, 438 - Centro, Juquiá/SP
                                 </p>
                             </div>
 
